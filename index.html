@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+  </head>
+
+  <body class="overflow-x-hidden dark:bg-darkTheme dark:text-white">
+
+    <!-- Gardiant image -->
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+      <img src="./images/header-bg-color.png" alt="" class="w-full" />
+    </div>
+
+    <nav
+      class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+      <img
+        src="/images/r logo.png" alt="Profile" class="w-28 cursor-pointer mr-14 dark:hidden"/>
+
+        <img
+        src="/images/rlogo2.png" alt="Profile" class="w-28 cursor-pointer mr-14 hidden dark:block"/>
+      <ul
+        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent
+      >
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">My Work</a></li>
+        <li><a href="#contact">Contact me</a></li>
+      </ul>
+
+      <div class="flex items-center gap-4">
+        <button onclick="toggleThem()">
+          <img src="./images/moon_icon.png" alt="" class="w-6 dark:hidden"/>
+          <img src="./images/sun_icon.png" alt="" class="w-6 hidden dark:block"/>
+        </button>
+
+        <a
+          href="#contact"
+          class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full m1-4 dark:border-white/50"
+          >Contact <img src="/images/arrow-icon.png" alt="" class="w-3 dark:hidden">
+          <img src="/images/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block">
+        </a>
+
+        <button class="block md:hidden m1-3" onclick="openMenu()">
+          <img src="./images/menu-black.png" alt="" class="w-6 dark:hidden"/>
+          <img src="./images/menu-white.png" alt="" class="w-6 hidden dark:block"/>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <ul
+        id="sideMenu"
+        class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-[#2a004a] dark:text-white"
+      >
+        <div class="absolute right-6 top-6" onclick="closeMenu()">
+          <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden"/>
+
+          <img src="./images/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block"/>
+        </div>
+        <li><a href="#top" onclick="closeMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">About me</a></li>
+        <li><a href="#services" onclick="closeMenu()">Services</a></li>
+        <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+      </ul>
+    </nav>
+
+    <!-- Header Section  -->
+
+    <div
+      class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4"
+    >
+      <img
+        src="./images/jj3.jpg"
+        alt=""
+        class="rounded-full w-32"
+      />
+      <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3">
+        Hi! I'm Nandlal Rana
+        <img src="./images/hand-icon.png" alt="" class="w-6" />
+      </h3>
+      <h1 class="text-3xl sm:text-6xl lg:text-[45px]">
+        Restaurant Manager based in Bengaluru.
+      </h1>
+      <p class="max-w-2xl mx-auto">
+        I am a Operation Manager at District 6 Kraft Properties In Rajajinagar, Bangalore
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <a
+          href="#contact"
+          class="px-10 from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 py-3 border rounded-full bg-gradient-to-r dark:border-transparent"
+          >Contact me
+          <img src="./images/right-arrow-white.png" alt="" class="w-4"
+        /></a>
+
+        <a
+          href="/images/CV .pdf"
+          download
+          class="px-10 flex items-center gap-2 bg-white py-3 border rounded-full border-gray-500 bg-gradient-to-r dark:text-black"
+          >my resume<img src="./images/download-icon.png" alt="" class="w-4"
+        /></a>
+      </div>
+    </div>
+
+    <!-- about me  -->
+
+    <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+      <h4 class="text-center mb-2 text-lg">Introduction</h4>
+      <h2 class="text-center text-5xl">About me</h2>
+
+      <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+        <div class="max-w-max mx-auto relative">
+          <img
+            src="/images/jj.jpg"
+            alt=""
+            class="w-64 sm:w-80 rounded-3xl max-w-none"
+          />
+
+          
+        </div>
+        <div class="flex-1">
+          <p class="mb-10 max-w-2xl">
+            I am an experienced Restaurant Manager with over a decade of
+            professional experties in the field. Throughout my career, i have
+            had privilege of collaborating with prestigious organizations,
+            contributing to threir sucess and growth.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+            <li
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
+            >
+            <!-- -------about1-------- -->
+
+              <img src="./images/code-icon.png" alt="" class="w-7 mt-3 dark:hidden" />
+              <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3 hiddem dark:block" />
+
+              <h3 class="my-4 font-semibold text-gray-700 dark:text-white">languages</h3>
+              <p class="text-gray-600 text-sm dark:text-white/80">
+                Hindi, English
+              </p>
+            </li>
+
+            <li
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
+            >
+            <!-- -------about2-------- -->
+
+              <img src="./images/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden" />
+              <img src="./images/edu-icon-dark.png" alt="" class="w-7 mt-3 hiddem dark:block" />
+              <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Education</h3>
+              <p class="text-gray-600 text-sm dark:text-white/80">Bachelor of Hotel Management and Catering Technology</p>
+            </li>
+
+            <li
+              class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
+            >
+            <!-- -------about3-------- -->
+
+              <img src="./images/project-icon.png" alt="" class="w-7 mt-3 dark:hidden" />
+              <img src="./images/project-icon-dark.png" alt="" class="w-7 mt-3 hiddem dark:block" />
+              <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Experience</h3>
+              <p class="text-gray-600 text-sm dark:text-white/80">11 year's of experience</p>
+            </li>
+            
+          </ul>
+          <h4 class="my-6 text-gray-700 dark:text-white/80">Tools i use</h4>
+
+          <ul class="flex items-center gap-3 sm:gap-5">
+            <!-- card 1  -->
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:translate-y-1 duration-500"
+            >
+              <img src="./images/computer.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <!-- card 2  -->
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:translate-y-1 duration-500"
+            >
+              <img src="./images/reputation.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <!-- card 3  -->
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:translate-y-1 duration-500"
+            >
+              <img src="./images/new-product.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <!-- card 4  -->
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:translate-y-1 duration-500"
+            >
+              <img src="./images/personal-branding.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <!-- card 5  -->
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:translate-y-1 duration-500"
+            >
+              <img src="./images/lead.png" alt="" class="w-5 sm:w-7" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- services  -->
+
+    <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+      <h4 class="text-center mb-2 text-lg">What i offer</h4>
+      <h2 class="text-center text-5xl">My Services</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+        I am Restaurant Manager from Bangalore, Karnataka With 11 years of
+        experience in HM field.
+      </p>
+
+      <div class="grid grid-cols-auto gap-6 my-10">
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+          <img src="./images/reception-desk.png" alt="" class="w-10" />
+          <h3 class="text-lg my-4 text-gray-700 dark:text-white">General Manager</h3>
+          <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
+            The general manager (GM) has the final say in all aspects of hotel operations,
+          </p>
+          <a href="" class="flex items-center gap-2 text-sm mt-5"
+            >Read more
+            <img src="./images/right-arrow.png" alt="" class="w-4" />
+          </a>
+        </div>
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+          <img src="./images/shuttle.png" alt="" class="w-10" />
+          <h3 class="text-lg my-4 text-gray-700 dark:text-white">Travel and tourism</h3>
+          <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
+            Tourism is different from hospitality as travel functions as a catalyst for people to spend more money on hospitality services
+          </p>
+          <a href="" class="flex items-center gap-2 text-sm mt-5"
+            >Read more
+            <img src="./images/right-arrow.png" alt="" class="w-4" />
+          </a>
+        </div>
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+          <img src="./images/concierge.png" alt="" class="w-10" />
+          <h3 class="text-lg my-4 text-gray-700 dark:text-white">Marketing management</h3>
+          <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
+            By discovering patterns in the demographics, purchasing trends and geography of your guests,
+          </p>
+          <a href="" class="flex items-center gap-2 text-sm mt-5"
+            >Read more
+            <img src="./images/right-arrow.png" alt="" class="w-4" />
+          </a>
+        </div>
+
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+          <img src="./images/teamX.png" alt="" class="w-10" />
+          <h3 class="text-lg my-4 text-gray-700 dark:text-white">Front office</h3>
+          <p class="text-sm text-gray-600 leading-5 dark:text-white/80">
+            The front office is the part of a company that comes in contact with clients, such as the marketing, sales, and service departments.
+          </p>
+          <a href="" class="flex items-center gap-2 text-sm mt-5"
+            >Read more
+            <img src="./images/right-arrow.png" alt="" class="w-4" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- my work  -->
+    <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
+        <h2 class="text-center text-5xl">My latest work</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+          Welcome to my Portfolio website! Explore a knowledge of Restaurant Manager, showcasing my expertise in Hotel Management.
+        </p>
+
+        <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
+          <div class="aspect-square bg-[url('./images/work-1.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+
+              <!-- for image  -->
+              <div>
+                <h2 class="font-semibold">Event Planning</h2>
+                <p class="text-sm text-gray-700">Event Design</p>
+              </div>
+              <!-- icons Section -->
+              <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                <img src="./images/send-icon.png" alt="" class="w-5">
+              </div>
+
+            </div>
+
+          </div>
+          <!-- card 2  -->
+          <div class="aspect-square bg-[url('./images/work-2.jpg')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+
+              <!-- for image  -->
+              <div>
+                <h2 class="font-semibold">Bartender</h2>
+                <p class="text-sm text-gray-700">Bartendring</p>
+              </div>
+              <!-- icons Section -->
+              <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                <img src="./images/send-icon.png" alt="" class="w-5">
+              </div>
+
+            </div>
+
+          </div>
+           <!-- end  -->
+            <!-- card 3  -->
+            <div class="aspect-square bg-[url('./images/work-3.avif')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+              <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+  
+                <!-- for image  -->
+                <div>
+                  <h2 class="font-semibold">Food & beverage</h2>
+                  <p class="text-sm text-gray-700">F&D.</p>
+                </div>
+                <!-- icons Section -->
+                <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                  <img src="./images/send-icon.png" alt="" class="w-5">
+                </div>
+  
+              </div>
+  
+            </div>
+             <!-- end  -->
+              <!-- card 4  -->
+              <div class="aspect-square bg-[url('./images/work-4.webp')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+    
+                  <!-- for image  -->
+                  <div>
+                    <h2 class="font-semibold">Management</h2>
+                    <p class="text-sm text-gray-700">Team Management</p>
+                  </div>
+                  <!-- icons Section -->
+                  <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                    <img src="./images/send-icon.png" alt="" class="w-5">
+                  </div>
+    
+                </div>
+    
+              </div>
+               <!-- end  -->
+        </div>
+        <a href="#" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-[#2a004a]">Show more 
+          <img src="./images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+          <img src="./images/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">
+        </a>
+          
+
+        </div>
+        <!-- -----------Contact Section------------ -->
+
+        <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
+
+          <h4 class="text-center mb-2 text-lg">Connect with me</h4>
+        <h2 class="text-center text-5xl">Get in touch</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+          I'd love to hear from you!
+          If you have any question, comments or feedback, please use the form below.
+        </p>
+        <!-- ---------form--------- -->
+         <form method="post" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto ">
+
+          <input type="hidden" name="access_key" value="685b36a1-c28c-438c-a896-7e332efb2f85">
+
+          <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+            <input type="text" placeholder="Enter your name" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="name">
+
+            <input type="email" placeholder="Enter your email" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="email">
+          </div>
+          <textarea rows="6" placeholder="Enter your message" class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90" required name="message"></textarea>
+
+          <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">Submit now 
+            <img src="./images/right-arrow-white.png" alt="" class="w-4">
+          </button>
+         </form>
+        </div>
+        <!-- ---------Footer---------- -->
+
+        <div class="mt-20">
+          <div class="text-center">
+            <img src="./images/r logo.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
+            <img src="./images/rlogo2.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+
+
+            <div class="w-max flex items-center gap-2 mx-auto ">
+              <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
+              <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
+              nandlalrana225@gmail.com
+            </div>
+          </div>
+          <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] myt12 py-6">
+            <p>@ 2024 Nandlal Rana. All right reserved.</p>
+            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+              <li><a href="https://www.facebook.com/nandlal.rana.10">Facebook</a></li>
+              <li><a href="https://www.linkedin.com/in/nandlal-rana-67a1a3179?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linkeldn</a></li>
+              <li><a href="https://www.instagram.com/nandlal5314?igsh=aTd3NmFjc3EwcmE2">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+    <script src="/script.js"></script>
+  </body>
+</html>
